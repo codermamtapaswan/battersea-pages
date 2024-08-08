@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css"
+        href="https://www.batterseawebexpert.com/wp-includes/css/dist/block-library/style.min.css?ver=6.5.2">
+    <link rel="stylesheet" type="text/css"
+        href="https://www.batterseawebexpert.com/wp-content/themes/batterseawebexpert/assets/css/bootstrap/bootstrap.min.css?ver=6.5.2">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css?ver=6.5.2">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css?ver=6.5.2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://www.batterseawebexpert.com/wp-content/themes/batterseawebexpert/assets/css/style.css?ver=6.5.2">
+    <link rel="stylesheet" type="text/css"
+        href="https://www.batterseawebexpert.com/wp-content/themes/batterseawebexpert/style.css?ver=6.5.2">
+    <style>
+        .company-tabs ul {
+            border: 0;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            place-items: center;
+        }
+
+        @media (max-width:768px) {
+            .company-tabs ul {
+                overflow-x: scroll;
+            }
+        }
+
+        .company-tabs .nav-item {
+            position: relative;
+            width: fit-content;
+        }
+
+        .company-tabs .nav-link::after {
+            content: "";
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+            background: var(--blue);
+            position: absolute;
+            left: 55px;
+            bottom: -9px;
+            width: 20px;
+            height: 10px;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .company-tabs ul .active::after {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .company-tabs ul .active {
+            box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+            border: 3px solid var(--blue) !important;
+        }
+
+        .company-tabs ul button {
+            border-radius: 50% !important;
+            width: 130px;
+            height: 130px;
+            padding: 5px !important;
+            border: 1px solid #ddd !important;
+        }
+
+        .company-tabs ul img {
+            width: 200px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: contain;
+        }
+
+        .table-responsive table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table-responsive table tr:first-child {
+            background: var(--blue);
+            color: #fff;
+        }
+
+        .table-responsive :is(td, th) {
+            border: 1px solid #cccccc61;
+            text-align: left;
+            padding: 6px 12px;
+        }
+
+        .table-responsive tr:nth-child(odd) {
+            background: #f2f2f2c7;
+        }
+
+        .pricing-table {
+            text-align: center;
+            background: #fff;
+            height: 100%;
+            border-radius: 5px;
+            padding: 20px 20px 30px 20px;
+            box-shadow: 0 2px 15px #00000026;
+            transition: transform .17s ease-out, box-shadow .17s ease-out;
+        }
+
+        .table-title {
+            background: #ffa500;
+            padding: 5px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-inline: auto;
+            margin-top: -42px;
+            margin-bottom: 10px;
+        }
+
+        .pricing-table img {
+            height: 180px;
+            padding-block: 10px;
+            margin-bottom: 20px;
+        }
+
+        .pricing-table ul li span {
+            font-weight: 500;
+        }
+
+        .pricing-table:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 29px 0 rgba(0, 21, 27, 0.05);
+        }
+
+        .pricing-table li {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            padding: 12px;
+            border-bottom: 1px solid #cccccc63;
+        }
+
+        .pricing-table li:nth-child(odd) {
+            background: #f2f2f2;
+        }
+
+        .sliders {
+            background: #f2f3f7;
+            padding: 50px;
+        }
+
+        .bg-one {
+            background-image: linear-gradient(rgb(0 0 0 / 87%), rgb(15 59 94), rgb(0 0 0 / 0%)), url(https://www.batterseawebexpert.com/wp-content/uploads/2023/02/service-bg3.webp);
+        }
+
+        /*  custom slider------------------- */
+        .testimonial {
+            margin: 0 10px;
+        }
+
+        .owl-theme .owl-controls .owl-page.active span,
+        .owl-theme .owl-controls.clickable .owl-page:hover span {
+            background: var(--blue);
+        }
+
+        .owl-theme .owl-controls .owl-page span {
+            width: 8px;
+            height: 8px;
+        }
+
+        @media screen and (max-width:1024px) {
+            .company-tabs ul button {
+                width: 100px;
+                height: 100px;
+            }
+
+            .sliders {
+                padding: 30px 0;
+            }
+
+            .company-tabs .nav-link::after {
+                left: 40px;
+            }
+
+            .bb {
+                border-bottom: 1px solid #dee2e6 !important;
+            }
+
+            #testimonial-slider .owl-controls {
+                display: none !important;
+            }
+
+            .company-tabs ul {
+                overflow: auto;
+                gap: 30px;
+                padding-block: 10px;
+            }
+        }
+
+        #video-slider .testimonial .strip {
+            margin-top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="top-bar main-bg">
+        <div class="container">
+            <div class="d-flex justify-content-end align-items-center">
+                <ul class="p-0 m-0 text-end d-none d-lg-block me-md-3 ">
+                    <li class="list-group-item"><a href="mailto: contact@batterseawebexpert.com"><i
+                                class="fa-regular fa-envelope-open pe-2"></i>
+                            contact@batterseawebexpert.com</a>
+                    </li>
+                </ul>
+                <nav class="nav justify-content-end justify-content-md-start ms-lg-3 ms-0">
+                    <nav class="top-nav">
+                        <div class="menu-topnav-container">
+                            <ul id="menu-topnav" class="menu">
+                                <li id="menu-item-1129"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1129"><a
+                                        href="https://www.batterseawebexpert.com/about/" class="nav-link">About Us</a>
+                                </li>
+                                <li id="menu-item-1130"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1130"><a
+                                        href="https://www.batterseawebexpert.com/our-team/" class="nav-link">Our
+                                        Team</a></li>
+                                <li id="menu-item-1268"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1268"><a
+                                        href="https://www.batterseawebexpert.com/career/" class="nav-link">Career</a>
+                                </li>
+                                <li id="menu-item-2315"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2315"><a
+                                        href="https://www.batterseawebexpert.com/our-clients/" class="nav-link">Our
+                                        Clients</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <section class="main-nav d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center py-2">
+                <div class="col-md-4 col">
+                    <div class="logo">
+                        <a href="https://www.batterseawebexpert.com/" class="custom-logo-link" rel="home"
+                            aria-current="page"><img width="234" height="73"
+                                src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/logo.webp"
+                                class="custom-logo" alt="battersea" decoding="async"></a>
+                    </div>
+                </div>
+                <div class="header-rt col-md-8 col d-flex justify-content-end align-items-center">
+                    <a href="tel:+91 9717 022 804" class="m-0 text-end me-3 me-lg-5"><i
+                            class="fa-solid fa-phone me-2 sonar-wave"></i><span class="d-none d-md-inline ms-1">+91 9717
+                            022 804</span></a><a href="#" class="m-0 text-end " data-bs-toggle="modal"
+                        data-bs-target="#myModal"><i class="fa-regular fa-envelope-open pe-2 me-1"></i>Schedule A
+                        Meeting</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-navigation sticky-top shadow">
+        <nav class="navbar navbar-expand-lg main-bg p-md-1">
+            <div class="container">
+                <div class="navbar-brand d-lg-none">
+                    <a href="https://www.batterseawebexpert.com/" class="custom-logo-link" rel="home"
+                        aria-current="page"><img width="234" height="73"
+                            src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/logo.webp"
+                            class="custom-logo" alt="battersea" decoding="async"></a>
+                </div>
+                <div class="header-rtg col d-flex  justify-content-end  d-lg-none">
+                    <a href="tel:+011-46558673" class="m-0 text-end"><i class="fa-solid fa-phone me-3"></i></a>
+                    <a href="#" class="m-0 text-end ms-lg-0 ms-md-2"><i class="fa-regular fa-envelope-open"></i></a>
+                </div>
+                <button class="navbar-toggler ms-lg-0 ms-md-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""><i class="fa-solid fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="menu-topnav-services" class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li id="menu-item-1133"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1133 nav-item dropdown me-md-3">
+                            <a href="#" class="nav-link ps-0">Search Engine Optimization</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-1136"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1136 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/seo-services/" class="dropdown-item">SEO
+                                        Services</a>
+                                </li>
+                                <li id="menu-item-1134"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/local-seo-services/"
+                                        class="dropdown-item">Local SEO</a>
+                                </li>
+                                <li id="menu-item-1156"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1156 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/mobile-seo-optimization/"
+                                        class="dropdown-item">Mobile SEO Optimization</a>
+                                </li>
+                                <li id="menu-item-1138"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1138 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/link-building-services/"
+                                        class="dropdown-item">Link Building</a>
+                                </li>
+                                <li id="menu-item-1137"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/video-seo-services/"
+                                        class="dropdown-item">Video SEO</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-1139"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1139 nav-item dropdown me-md-3">
+                            <a href="#" class="nav-link ps-0">Social Media</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-1140"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1140 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/social-media-services/"
+                                        class="dropdown-item">Social Media Services</a>
+                                </li>
+                                <li id="menu-item-1141"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1141 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/social-media-marketing/"
+                                        class="dropdown-item">Social Media Marketing</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-1142"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1142 nav-item dropdown me-md-3">
+                            <a href="#" class="nav-link ps-0">Web Solution</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-1143"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1143 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/web-development-services/"
+                                        class="dropdown-item">Web Development Services</a>
+                                </li>
+                                <li id="menu-item-1144"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1144 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/web-design-services/"
+                                        class="dropdown-item">Web Design Services</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-1153"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1153 nav-item dropdown me-md-3">
+                            <a href="#" class="nav-link ps-0">Digital Marketing</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-1155"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1155 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/digital-marketing-services/"
+                                        class="dropdown-item">Digital Marketing Services</a>
+                                </li>
+                                <li id="menu-item-1154"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1154 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/content-marketing-services/"
+                                        class="dropdown-item">Content Marketing</a>
+                                </li>
+                                <li id="menu-item-1135"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1135 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/email-marketing-services/"
+                                        class="dropdown-item">Email Marketing</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-1145"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1145 nav-item dropdown me-md-3">
+                            <a href="#" class="nav-link ps-0">PPC</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-1146"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1146 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/ppc-services/"
+                                        class="dropdown-item">PPC</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-1147"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1147 nav-item dropdown me-md-3">
+                            <a href="#" class="nav-link ps-0">Packages</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-1151"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1151 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/local-seo-packages/"
+                                        class="dropdown-item">Local SEO Packages</a>
+                                </li>
+                                <li id="menu-item-1148"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1148 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/smm-packages/" class="dropdown-item">SMM
+                                        Packages</a>
+                                </li>
+                                <li id="menu-item-1149"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1149 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/ppc-packages/" class="dropdown-item">PPC
+                                        Packages</a>
+                                </li>
+                                <li id="menu-item-1150"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1150 nav-item dropdown">
+                                    <a href="https://www.batterseawebexpert.com/seo-packages/" class="dropdown-item">SEO
+                                        Packages</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-4597"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4597 nav-item dropdown">
+                            <a href="https://www.batterseawebexpert.com/portfolio/" class="nav-link">Portfolio</a>
+                        </li>
+                        <li id="menu-item-1152"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1152 nav-item dropdown">
+                            <a href="https://www.batterseawebexpert.com/blog/" class="nav-link">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- section one starts -->
+    <section class="space">
+        <div class="container">
+            <div class="heading text-center mb-lg-5 mb-3">
+                <h2 class="fs-1 text-center"><span>Our Proven Track Record </span>as the Leading Digital Marketing
+                    Agency in Delhi</h2>
+            </div>
+            <div class="company-tabs">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one"
+                            type="button" role="tab" aria-controls="one" aria-selected="true">
+                            <img src="images/gstsuvidhacenters.webp" class="img-fluid">
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two" type="button"
+                            role="tab" aria-controls="two" aria-selected="false">
+                            <img src="/images/jandigitalkendra.png" class="img-fluid">
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three"
+                            type="button" role="tab" aria-controls="three" aria-selected="false">
+                            <img src="/images/famousbollywood.webp" class="img-fluid">
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="four-tab" data-bs-toggle="tab" data-bs-target="#four" type="button"
+                            role="tab" aria-controls="four" aria-selected="false">
+                            <img src="/images/triphippies.svg" class="img-fluid">
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="five-tab" data-bs-toggle="tab" data-bs-target="#five" type="button"
+                            role="tab" aria-controls="five" aria-selected="false">
+                            <img src="/images/enggpro.png" class="img-fluid">
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="six-tab" data-bs-toggle="tab" data-bs-target="#six" type="button"
+                            role="tab" aria-controls="six" aria-selected="false">
+                            <img src="/images/progressivetourtravels.webp" class="img-fluid">
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content mt-5" id="myTabContent">
+                    <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="one-tab">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-6">
+                                <div class="table-responsive">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>Keywords</th>
+                                                <th>Ranking</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Gst suvidha centers</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>List of government franchises</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gst suvidha kendra</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Grahak seva kendra</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Government franchise</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Digital store franchise</td>
+                                                <td>3</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center">
+                                <img src="images/gst-dispaly.webp" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-6">
+                                <div class="table-responsive">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>Keywords</th>
+                                                <th>Ranking</th>
+                                            </tr>
+                                            <tr>
+                                                <td>CSC jan seva kendra</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jan seva kendra registration free</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jan seva kendra odisha online apply</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mudra loan for franchise business</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sahaj registration fee</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>e-Digital store</td>
+                                                <td>5</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center">
+                                <img src="/images/jandigitalkendra-display.webp" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="three-tab">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-6">
+                                <div class="table-responsive">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>Keywords</th>
+                                                <th>Ranking</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Panchayat season 2 full episodes download</td>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Miss call bengali full movie download 1080p</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mirzapur season 1 episode 1 download</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mirzapur season 1 torrent</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ankita dave hot web series name</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Top 10 national crush of india male</td>
+                                                <td>2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center">
+                                <img src="images/famousbollywood-display.webp" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="four" role="tabpanel" aria-labelledby="four-tab">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-6">
+                                <div class="table-responsive">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>Keywords</th>
+                                                <th>Ranking</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Flying panda theme park tickets</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Smaaash noida ticket price</td>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Chokhi dhani noida timings</td>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Queensland rides list 2024</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sunder nursery nearest metro</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Queensland entry fee 2024</td>
+                                                <td>2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center">
+                                <img src="/images/triphippies-display.webp" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five-tab">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-6">
+                                <div class="table-responsive">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>Keywords</th>
+                                                <th>Ranking</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Alap Naik Desai</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Best engineering company in india</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Indian aluminium co limited</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bearing company</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Best pvc pipe company</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ongc vendor registration</td>
+                                                <td>2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center">
+                                <img src="/images/enggpro-display.webp" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="six" role="tabpanel" aria-labelledby="six-tab">
+                        <div class="row align-items-center g-4">
+                            <div class="col-lg-6">
+                                <div class="table-responsive">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>Keywords</th>
+                                                <th>Ranking</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Luxury tempo traveller in delhi</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Best tour and travel agency in delhi</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>26 seater tempo traveller on rent</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Best tempo traveller</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Inbound travel agents in delhi</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Patnitop to srinagar</td>
+                                                <td>3</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-center">
+                                <img src="/images/pc-display.webp" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section one ends -->
+    <!-- pricing section starts -->
+    <section class="space services bg-one pt-5 pb-0">
+        <div class="container">
+            <div class="heading text-center mb-md-5 mb-2">
+                <h2 class="fs-1 text-white"><span>Choose Your Plan</span> </h2>
+                <p class="text-white pb-3">Discover the Ideal Plan Tailored to Your Needs in Just a Few Simple Clicks.
+                    Start Today !</p>
+            </div>
+            <div class="row g-4 pb-md-4 pb-0">
+                <div class="col-lg-3 col-md-6">
+                    <div class="pricing-table">
+                        <div class="h5 fw-semibold mb-2 mt-3">Local Seo Packages</div>
+                        <p class="mb-0">Boost Your Online Presence with Our SEO Packages</p>
+                        <ul class="list-unstyled d-flex align-items-center flex-column mb-4 mt-3">
+                            <li><span class="fs-6">Basic Plan</span> ₹ 10,000</li>
+                            <li><span class="fs-6">Premium Plan</span> ₹ 20,000</li>
+                            <li><span class="fs-6">Platinum Plan</span> ₹ 30,000</li>
+                        </ul>
+                        <div class="button mt-4 mb-2">
+                            <a href="#">Choose plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="pricing-table">
+                        <div class="h5 fw-semibold mb-2 mt-3">SMM Packages</div>
+                        <p class="mb-0">Custom SMM Packages for Maximum Engagement</p>
+                        <ul class="list-unstyled d-flex align-items-center flex-column mb-4 mt-3">
+                            <li><span class="fs-6">Basic Plan</span> ₹ 10,000</li>
+                            <li><span class="fs-6">Premium Plan</span> ₹ 20,000</li>
+                            <li><span class="fs-6">Platinum Plan</span> ₹ 30,000</li>
+                        </ul>
+                        <div class="button mt-4 mb-2">
+                            <a href="#">Choose plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-lg-0 pt-4">
+                    <div class="pricing-table">
+                        <!-- <div class="table-title">Most Popular</div> -->
+                        <div class="h5 fw-semibold mb-2 mt-3">PPC Packages</div>
+                        <p class="mb-0">Drive Results with Targeted PPC Campaigns</p>
+                        <ul class="list-unstyled d-flex align-items-center flex-column mb-4 mt-3">
+                            <li><span class="fs-6">Basic Plan</span> ₹ 10,000</li>
+                            <li><span class="fs-6">Premium Plan</span> ₹ 20,000</li>
+                            <li><span class="fs-6">Platinum Plan</span> ₹ 30,000</li>
+                        </ul>
+                        <div class="button mt-4 mb-2">
+                            <a href="#">Choose plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-lg-0 pt-4">
+                    <div class="pricing-table">
+                        <div class="h5 fw-semibold mb-2 mt-3">Seo Packages</div>
+                        <p class="mb-0">Affordable SEO Packages Tailored to You</p>
+                        <ul class="list-unstyled d-flex align-items-center flex-column mb-4 mt-3">
+                            <li><span class="fs-6">Basic Plan</span> ₹ 10,000</li>
+                            <li><span class="fs-6">Premium Plan</span> ₹ 20,000</li>
+                            <li><span class="fs-6">Platinum Plan</span> ₹ 30,000</li>
+                        </ul>
+                        <div class="button mt-4 mb-2">
+                            <a href="#">Choose plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- pricing section ends -->
+    <!-- section two starts -->
+    <section class="space seo-ab pt-0 pb-3">
+        <div class="container">
+            <div class="heading text-center pb-lg-5 pb-4">
+                <h2 class="fs-1 text-center"><span>Frequently </span>Asked <span>Questions</span></h2>
+                <p class="mb-0">Real Stories That Illuminate the Value of Our Products and Services</p>
+            </div>
+            <div class="row faq accordion accordion-flush accordion" id="accordionFlushExample">
+                <div class="col-lg-6">
+                    <div class="accordion-item">
+                        <h6 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                What services does BetterSeaWebExpert offer?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>We offer robust digital marketing services that include the following:</p>
+                                <ul>
+                                    <li>Search Engine Optimization</li>
+                                    <li>Social Media Optimization </li>
+                                    <li>Social Media Marketing </li>
+                                    <li>Social Media Advertising</li>
+                                    <li>Content Marketing</li>
+                                    <li>Content Writing</li>
+                                    <li>Graphic Designing</li>
+                                    <li>Email Marketing</li>
+                                    <li>PPC Management</li>
+                                    <li>Web Development </li>
+                                    <li>Web Design</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h6 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                How can BetterSeaWebExpert help my business grow online?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Our digital marketing services can help your business target a potential audience to
+                                    sell your product or services. We ensure that our client’s digital presence is as
+                                    per the search engine algorithms.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bb">
+                        <h6 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                What sets BetterSeaWebExpert apart from other digital marketing agencies?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>We are known for the expertise and adaptability of our experts, who have been
+                                    operating in the industry for decades. Our professionals have worked in all
+                                    industries, such as healthcare, entertainment, food, law firms, e-commerce,
+                                    education, fitness, real estate, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bb">
+                        <h6 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                                aria-controls="flush-collapseSeven">
+                                How do I choose the right digital marketing agency for my business?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>When choosing a digital marketing agency, look at the portfolio and served
+                                    industries. Choose an agency that has multiple clients and has assisted businesses
+                                    in your industry.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bb">
+                        <h6 class="accordion-header" id="flush-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseEight" aria-expanded="false"
+                                aria-controls="flush-collapseEight">
+                                What are the benefits of hiring a digital marketing agency?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>A digital marketing agency like ours can help you surpass rivals and competitors by
+                                    improving ROI, providing expert guidance, and implementing marketing strategies.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bb">
+                        <h6 class="accordion-header" id="flush-headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseNine" aria-expanded="false"
+                                aria-controls="flush-collapseNine">
+                                How do digital marketing agencies measure success?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseNine" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>We measure the success of our projects using metrics like website traffic,
+                                    impressions, content quality, leads, clicks, bounce rate, and conversions. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bb">
+                        <h6 class="accordion-header" id="flush-headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTen" aria-expanded="false"
+                                aria-controls="flush-collapseTen">
+                                What is the difference between traditional marketing and digital marketing?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseTen" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Traditional marketing uses conventional methods like telemarketing, billboards,
+                                    broadcasting, print advertising, etc. to promote goods and services, whereas digital
+                                    marketing uses technologies and online platforms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="accordion-item">
+                        <h6 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                What kind of support does BetterSeaWebExpert offer to clients during and after a
+                                project?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>We help our clients craft effective marketing strategies to boost their online
+                                    presence and provide after-project services like 24/7 customer support, website
+                                    maintenance, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h6 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                How can I request a consultation or get started with BetterSeaWebExpert's services?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>To request a consultation, you can contact us via our contact number, +91 9717 022
+                                    804, or schedule a meeting through the “Schedule A Meeting” option on the navigation
+                                    or menu bar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h6 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                aria-controls="flush-collapseSix">
+                                What are the pricing options for BetterSeaWebExpert's digital marketing services?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Our digital marketing services mainly include four packages, each having 3 plans.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h6 class="accordion-header" id="flush-headingEleven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseEleven" aria-expanded="false"
+                                aria-controls="flush-collapseEleven">
+                                How can a digital marketing agency help my small business?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseEleven" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Digital marketing services can help a small business in several ways, such as
+                                    increasing return on investment (ROI), achieving a higher conversion rate,
+                                    surpassing competitors, and breaking geographical barriers. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h6 class="accordion-header" id="flush-headingTwelve">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwelve" aria-expanded="false"
+                                aria-controls="flush-collapseTwelve">
+                                How do I know if a digital marketing agency is reputable?
+                            </button>
+                        </h6>
+                        <div id="flush-collapseTwelve" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>A digital marketing agency is considered reputable when it has a well-designed
+                                    website, positive testimonials, and provides a timeline for results.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h6 class="accordion-header" id="flush-headingthirteen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapsethirteen" aria-expanded="false"
+                                aria-controls="flush-collapsethirteen">
+                                Can a digital marketing agency help with social media management?
+                            </button>
+                        </h6>
+                        <div id="flush-collapsethirteen" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingthirteen" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Yes, a digital marketing agency can help with social media management, as it is an
+                                    integral part of digital marketing. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section three ends -->
+    <!-- slider section starts -->
+    <section class="space sliders Customer-Reviews">
+        <div class="container">
+            <div class="heading text-center mb-lg-5 mb-3">
+                <h2 class="fs-1 text-center"><span>Customer </span>FeedBack</h2>
+                <p class="mb-0">What Our Clients Say About Their Experience</p>
+            </div>
+            <div class="row align-items-center g-lg-2 g-5">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div id="video-slider" class="owl-carousel">
+                        <div class="testimonial">
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/-Oat4Bt6uFs?si=Zrv7Rr5q15AH1dzI"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="strip p-2 text-white fs-5 fw-semibold">Why your business needs Digital Marketing
+                                ?</div>
+                        </div>
+                        <div class="testimonial">
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/JyFoy6pFqxk?si=mdAHYvpZd0h3p2Bf"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="strip p-2 text-white fs-5 fw-semibold">Why your business needs Digital Marketing
+                                ?</div>
+                        </div>
+                        <div class="testimonial">
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/-Oat4Bt6uFs?si=Zrv7Rr5q15AH1dzI"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="strip p-2 text-white fs-5 fw-semibold">Why your business needs Digital Marketing
+                                ?</div>
+                        </div>
+                        <div class="testimonial">
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/JyFoy6pFqxk?si=mdAHYvpZd0h3p2Bf"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="strip p-2 text-white fs-5 fw-semibold">Why your business needs Digital Marketing
+                                ?</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1">
+                    <div id="news-slider" class="owl-carousel">
+                        <div class="post-slide text-center py-4 bg-white px-3">
+                            <div class="post-img">
+                                <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/client-img2.webp"
+                                    alt="">
+                            </div>
+                            <div class="post-review">
+                                <h3 class="post-title">Divya Trivedi</h3>
+                                <p class="post-description mb-0">
+                                    Batterseawebexpert is the best digital marketing agency I've come across! Their team
+                                    provides excellent services that have boosted my online presence. Highly recommend
+                                    them to anyone looking to grow their business online.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="post-slide text-center py-4 bg-white px-3">
+                            <div class="post-img">
+                                <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/client-img3.webp"
+                                    alt="">
+                            </div>
+                            <div class="post-review">
+                                <h3 class="post-title">Rohan Shakya</h3>
+                                <p class="post-description mb-0">Batterseawebexpert is undoubtedly the best digital
+                                    marketing agency in the industry. Their team is highly skilled and dedicated to
+                                    delivering excellent results. I highly recommend their services to anyone looking to
+                                    boost their online presence.</p>
+                            </div>
+                        </div>
+                        <div class="post-slide text-center py-4 bg-white px-3">
+                            <div class="post-img">
+                                <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/client-img.webp"
+                                    alt="">
+                            </div>
+                            <div class="post-review">
+                                <h3 class="post-title">Rahul chandoria</h3>
+                                <p class="post-description mb-0">I am extremely satisfied with the services provided by
+                                    Batterseawebexpert. They are the best digital marketing company in terms of
+                                    expertise and professionalism. Thanks to them, my business has seen a significant
+                                    increase in leads and sales.</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="post-slide text-center py-4 bg-white px-3">
+                            <div class="post-img">
+                                <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/client-img.webp"
+                                    alt="">
+                            </div>
+                            <div class="post-review">
+                                <h3 class="post-title">Rahul chandoria</h3>
+                                <p class="post-description mb-0">I'm so impressed with Batterseawebexpert's digital
+                                    marketing services. They truly are the best digital marketing company I've worked
+                                    with. Their strategies are effective and have helped my business grow exponentially.
+                                    Highly recommend them to all.</p>
+                            </div>
+                        </div>
+
+                        <div class="post-slide text-center py-4 bg-white px-3">
+                            <div class="post-img">
+                                <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/client-img.webp"
+                                    alt="">
+                            </div>
+                            <div class="post-review">
+                                <h3 class="post-title">Rahul chandoria</h3>
+                                <p class="post-description mb-0">Batterseawebexpert is a game-changer! Their digital
+                                    marketing services are exceptional, making them the best in the business. Thanks to
+                                    them, my sales have seen a remarkable increase, and I've attracted more customers
+                                    than ever before.</p>
+                            </div>
+                        </div>
+
+                        <div class="post-slide text-center py-4 bg-white px-3">
+                            <div class="post-img">
+                                <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/client-img.webp"
+                                    alt="">
+                            </div>
+                            <div class="post-review">
+                                <h3 class="post-title">Rahul chandoria</h3>
+                                <p class="post-description mb-0">If you're looking for the best digital marketing
+                                    agency, look no further than Batterseawebexpert! Their expertise in increasing sales
+                                    and customers is unmatched. Thanks to them, my business has flourished, and I
+                                    couldn't be happier with the results.</p>
+                            </div>
+                        </div>
+
+                        <div class="post-slide text-center py-4 bg-white px-3">
+                            <div class="post-img">
+                                <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/client-img.webp"
+                                    alt="">
+                            </div>
+                            <div class="post-review">
+                                <h3 class="post-title">Rahul chandoria</h3>
+                                <p class="post-description mb-0">Choosing Batterseawebexpert was the best decision I
+                                    made for my business! Their digital marketing services are outstanding, making them
+                                    the best in the industry. Thanks to them, I've seen a substantial increase in sales
+                                    and customers. Couldn't be happier with the results.</p>
+                            </div>
+                        </div>
+
+                        <div class="post-slide text-center py-4 bg-white px-3">
+                            <div class="post-img">
+                                <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/client-img.webp"
+                                    alt="">
+                            </div>
+                            <div class="post-review">
+                                <h3 class="post-title">Rahul chandoria</h3>
+                                <p class="post-description mb-0">Batterseawebexpert is the best digital marketing agency
+                                    I've ever worked with. Their services are exceptional, and they've helped me
+                                    increase my sales and customers beyond belief. If you want real results, choose
+                                    them.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- slider section edns -->
+    <section class="space footer pb-4">
+        <div class=" d-flex align-items-center">
+            <div class="container">
+                <div class="footer-strip d-lg-flex align-items-center justify-content-between px-4 rounded">
+                    <div class="footer-strip-h">Now! Ready To Share Your Project Details?</div>
+                    <div class="details-btn mt-4 mt-md-3 mt-lg-0">
+                        <a href="https://www.batterseawebexpert.com/contact"><i
+                                class="fa-regular fa-envelope-open pe-2"></i>Click Here To Share Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-6 mt-4 mt-md-5">
+                    <div class="foot-h">
+                        <span>Company</span>
+                        <div class="foot-sep"></div>
+                    </div>
+                    <ul class="menu-page-footer ps-0 pt-md-3">
+                        <div class="menu-links-container">
+                            <ul id="menu-links" class="ps-0">
+                                <li id="menu-item-1158"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1158"><a
+                                        href="https://www.batterseawebexpert.com/about/" class="cool-link">About</a>
+                                </li>
+                                <li id="menu-item-4584"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4584"><a
+                                        href="https://www.batterseawebexpert.com/portfolio/"
+                                        class="cool-link">Portfolio</a></li>
+                                <li id="menu-item-1246"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1246"><a
+                                        href="https://www.batterseawebexpert.com/contact/" class="cool-link">Contact</a>
+                                </li>
+                                <li id="menu-item-1160"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1160"><a
+                                        href="https://www.batterseawebexpert.com/blog/" class="cool-link">Blog</a></li>
+                                <li id="menu-item-1293"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1293"><a
+                                        href="https://www.batterseawebexpert.com/term-and-condition/"
+                                        class="cool-link">Term &amp; Conditions</a></li>
+                                <li id="menu-item-2409"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2409">
+                                    <a rel="privacy-policy" href="https://www.batterseawebexpert.com/privacy-policy/"
+                                        class="cool-link">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-2 mt-md-5">
+                    <div class="foot-h">
+                        <span>Services</span>
+                        <div class="foot-sep"></div>
+                    </div>
+                    <ul class="menu-page-footer ps-0 pt-md-3">
+                        <div class="menu-footer-services-container">
+                            <ul id="menu-footer-services" class="ps-0">
+                                <li id="menu-item-1161"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1161"><a
+                                        href="https://www.batterseawebexpert.com/digital-marketing-services/"
+                                        class="cool-link">Digital Marketing Service</a></li>
+                                <li id="menu-item-1164"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1164"><a
+                                        href="https://www.batterseawebexpert.com/web-development-services/"
+                                        class="cool-link">Web Development Services</a></li>
+                                <li id="menu-item-1179"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1179"><a
+                                        href="https://www.batterseawebexpert.com/social-media-marketing/"
+                                        class="cool-link">Social Media Marketing</a></li>
+                                <li id="menu-item-1162"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1162"><a
+                                        href="https://www.batterseawebexpert.com/ppc-services/" class="cool-link">Pay
+                                        Per Click</a></li>
+                                <li id="menu-item-1181"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1181"><a
+                                        href="https://www.batterseawebexpert.com/seo-services/" class="cool-link">Search
+                                        Engine Optimization</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-lg-7 col-md-6 mt-2 mt-md-5">
+                    <div class="foot-h">
+                        <span>Location Based Services</span>
+                        <div class="foot-sep"></div>
+                    </div>
+                    <ul class="menu-page-footer ps-0 pt-md-3">
+                        <div class="menu-footer-locations-container">
+                            <ul id="menu-footer-locations" class="ps-0">
+                                <li id="menu-item-1866"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1866"><a
+                                        href="https://www.batterseawebexpert.com/digital-marketing-agency-in-delhi/"
+                                        class="cool-link">Digital Marketing Agency in Delhi</a></li>
+                                <li id="menu-item-1771"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1771"><a
+                                        href="https://www.batterseawebexpert.com/digital-marketing-agency-in-mumbai/"
+                                        class="cool-link">Digital Marketing Agency in Mumbai</a></li>
+                                <li id="menu-item-1864"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1864"><a
+                                        href="https://www.batterseawebexpert.com/digital-marketing-agency-in-chennai/"
+                                        class="cool-link">Digital Marketing Agency In Chennai</a></li>
+                                <li id="menu-item-1865"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1865"><a
+                                        href="https://www.batterseawebexpert.com/digital-marketing-agency-in-bangalore/"
+                                        class="cool-link">Digital Marketing Agency In Bangalore</a></li>
+                                <li id="menu-item-1867"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1867"><a
+                                        href="https://www.batterseawebexpert.com/digital-marketing-agency-in-hyderabad/"
+                                        class="cool-link">Digital Marketing Agency In Hyderabad</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+                <!--             <div class="col-lg-3 col-md-6 mt-2 mt-md-5">
+                        <div class="foot-h">
+                            <span>Contacttt Info</span>
+                            <div class="foot-sep"></div>
+                        </div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.3680455912317!2d77.03005831455931!3d28.618729491457465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d05480912ca83%3A0x86b654f78a535648!2sBattersea%20Web%20Expert%20-%20Best%20Digital%20Marketing%20Agency%20In%20Delhi!5e0!3m2!1sen!2sin!4v1673292424179!5m2!1sen!2sin"
+                            width="100%" height="210px" class="rounded" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div> -->
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-7 mb-2 mb-md-0">
+                    <div class="row mt-4">
+                        <div class="col-lg-3 col-md-3 col-6 order-1 order-lg-0">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/foot-bi.webp"
+                                class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 order-2 order-lg-0">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/foot-bi2.webp"
+                                class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 mt-4 mt-md-0 order-3 order-lg-0">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/foot-bi3.webp"
+                                class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-6 mt-4 mt-md-0 order-4 order-lg-0">
+                            <img src="https://www.batterseawebexpert.com/wp-content/uploads/2023/07/foot-bi4.webp"
+                                class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 mb-2 mb-md-0">
+                    <ul class="foot-contact">
+                        <li>
+                            <a href="#"><i class="fa-solid fa-phone me-2"></i></a><a
+                                href="tel:+011-46558673">011-46558673
+                                &nbsp;/
+                            </a><a href="tel:+91 9717 022 804">+91 9717 022 804</a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@batterseawebexpert.com" target="_blank"
+                                class="d-flex align-items-center"><i
+                                    class="fa-regular fa-envelope-open me-2"></i><span>contact@batterseawebexpert.com</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Battersea+Web+Expert+-+Best+Digital+Marketing+Agency+In+Delhi/@28.6187295,77.0300583,17z/data=!3m1!4b1!4m5!3m4!1s0x390d05480912ca83:0x86b654f78a535648!8m2!3d28.6187248!4d77.032247"
+                                target="_blank" class="d-flex align-items-top"><i
+                                    class="fa-solid fa-location-dot   me-2"></i><span>C-1/18 A, C-block Rama Park,
+                                    Dwarka
+                                    Mor Metro Pillar No-771, New Delhi-110059</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- js links starts -->
+    <script
+        src="https://www.batterseawebexpert.com/wp-content/themes/batterseawebexpert/assets/js/bootstrap.bundle.min.js?ver=6.5.2"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js?ver=6.5.2"
+        id="script-jquery-js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js?ver=6.5.2"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js?ver=6.5.2"
+        id="script-owl-js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#news-slider").owlCarousel({
+                items: 1,
+                itemsDesktop: [1199, 1],
+                itemsDesktopSmall: [979, 1],
+                itemsTablet: [767, 1],
+                pagination: true,
+                autoPlay: true
+            });
+        });
+    </script>
+    <!-- -------------------- -->
+    <script>
+        $(document).ready(function () {
+            $("#video-slider").owlCarousel({
+                items: 1,
+                itemsDesktop: [1199, 1],
+                itemsDesktopSmall: [979, 1],
+                itemsTablet: [767, 1],
+                pagination: true,
+                autoPlay: true
+            });
+        });
+    </script>
+</body>
+
+</html>
