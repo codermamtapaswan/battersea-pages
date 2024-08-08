@@ -1,0 +1,103 @@
+.seo-protfolio-container {
+  /* position: relative; */
+  padding: 30px;
+  border-radius: 4px;
+  color: #fff;
+  /* background: linear-gradient(315deg, hsl(240deg 100% 20%) -1%, hsl(205, 93%, 22%) 4%, hsl(208, 9%, 60%) 100%),
+    url('https://path-to-your-transparent-texture.png'); */
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 20px #b1b1b1;
+  background-image: linear-gradient(rgba(13, 52, 83, 0.5), rgb(13 52 83 / 44%), rgb(13, 52, 83)),
+    url(https://www.batterseawebexpert.com/wp-content/uploads/2023/07/footer-bg.webp);
+}
+
+.seo-protfolio-container .post-bx {
+  background: #fff;
+  border-radius: 4px;
+  margin-bottom: 0 !important;
+}
+
+.seo-protfolio-container .post-bx .post-bx-img {
+  height: 400px !important;
+  margin-bottom: 0;
+}
+
+
+.seo_portfolio_content {
+  position: relative;
+}
+
+@media(max-width:768px) {
+  .seo_portfolio_content .table {
+    overflow-x: auto;
+  }
+}
+
+.seo_portfolio_content table {
+  border: 1px solid #fff;
+}
+
+.seo_portfolio_content :is(tbody, td, tfoot, th, thead, tr) {
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+}
+
+.ribbon {
+  position: relative;
+}
+
+.ribbon1 {
+  position: absolute;
+  top: -36.1px;
+  left: -18px;
+  z-index: 100;
+}
+
+.ribbon1:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 51px solid transparent;
+  border-top: 11px solid #F8463F;
+  left: 0px;
+}
+
+.ribbon1 span {
+  position: relative;
+  display: block;
+  text-align: center;
+  background: #F8463F;
+  font-size: 14px;
+  line-height: 1;
+  padding: 12px 8px 10px;
+  border-top-right-radius: 8px;
+  width: 90px;
+}
+
+.ribbon1 span:before,
+.ribbon1 span:after {
+  position: absolute;
+  content: "";
+}
+
+.ribbon1 span:before {
+  height: 6px;
+  width: 6px;
+  left: -6px;
+  top: 0;
+  background: #F8463F;
+}
+
+.ribbon1 span:after {
+  height: 6px;
+  width: 8px;
+  left: -8px;
+  top: 0;
+  border-radius: 8px 8px 0 0;
+  background: #C02031;
+}
