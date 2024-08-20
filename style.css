@@ -1,16 +1,11 @@
 .seo-protfolio-container {
-  /* position: relative; */
   padding: 30px;
   border-radius: 4px;
   color: #fff;
-  /* background: linear-gradient(315deg, hsl(240deg 100% 20%) -1%, hsl(205, 93%, 22%) 4%, hsl(208, 9%, 60%) 100%),
-    url('https://path-to-your-transparent-texture.png'); */
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 20px #b1b1b1;
-  /* background-image: linear-gradient(rgba(13, 52, 83, 0.5), rgb(13 52 83 / 44%), rgb(13, 52, 83)),
-    url(https://wp.ditsolution.net/itsoft/wp-content/uploads/2023/09/service-bg.jpg); */
   background-image: url(https://wp.ditsolution.net/itsoft/wp-content/uploads/2023/09/service-bg.jpg);
 }
 
