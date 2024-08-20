@@ -9,19 +9,25 @@
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 20px #b1b1b1;
-  background-image: linear-gradient(rgba(13, 52, 83, 0.5), rgb(13 52 83 / 44%), rgb(13, 52, 83)),
-    url(https://www.batterseawebexpert.com/wp-content/uploads/2023/07/footer-bg.webp);
+  /* background-image: linear-gradient(rgba(13, 52, 83, 0.5), rgb(13 52 83 / 44%), rgb(13, 52, 83)),
+    url(https://wp.ditsolution.net/itsoft/wp-content/uploads/2023/09/service-bg.jpg); */
+  background-image: url(https://wp.ditsolution.net/itsoft/wp-content/uploads/2023/09/service-bg.jpg);
 }
 
 .seo-protfolio-container .post-bx {
   background: #fff;
   border-radius: 4px;
   margin-bottom: 0 !important;
+  padding: 10px;
 }
 
 .seo-protfolio-container .post-bx .post-bx-img {
   height: 400px !important;
   margin-bottom: 0;
+}
+
+.seo-protfolio-container .post-bx .post-bx-img img {
+  padding: 0 !important;
 }
 
 
@@ -101,6 +107,7 @@
   border-radius: 8px 8px 0 0;
   background: #C02031;
 }
+
 .ribbon4 {
   position: absolute;
   top: -15px;
@@ -111,10 +118,13 @@
   border-radius: 5px 5px 0px 5px;
   z-index: 100;
 }
-.ribbon4:before, .ribbon4:after {
+
+.ribbon4:before,
+.ribbon4:after {
   content: "";
   position: absolute;
 }
+
 .ribbon4:before {
   width: 10px;
   height: 100%;
@@ -124,6 +134,7 @@
   background: inherit;
   border-radius: 0px 5px 5px 0px;
 }
+
 .ribbon4:after {
   width: 9px;
   height: 6px;
